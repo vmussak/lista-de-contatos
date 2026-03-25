@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -13,13 +13,13 @@ namespace ListaDeContatos
 
         private List<Contato> _contatos;
 
-        public void Adicionar(string nome, string telefone)
+        public void Adicionar(string nome, string telefone, string tipo)
         {
             var x = new Contato
             {
                 Nome = nome,
                 Telefone = telefone,
-                Tipo = "Celular"
+                Tipo = tipo
             };
 
             _contatos.Add(x);
