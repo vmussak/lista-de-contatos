@@ -5,7 +5,7 @@ var lista = new ListaDeContato();
 ExibirMenu();
 var opcao = Console.ReadLine();
 
-while (opcao != "3")
+while (opcao != "4")
 {
     Console.Clear();
 
@@ -29,6 +29,14 @@ while (opcao != "3")
     {
         var todos = lista.ListarTodos();
         Console.WriteLine(todos);
+    }
+
+    if(opcao == "3") 
+    {
+        Console.Write("Digite o tipo para buscar: ");
+        var tipo = Console.ReadLine();
+        var listaPorTipo = lista.ListarPorTipo(tipo);
+        Console.WriteLine(listaPorTipo);
     }
 
     ExibirMenu();
