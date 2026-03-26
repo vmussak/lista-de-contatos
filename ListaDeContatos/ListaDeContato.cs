@@ -35,5 +35,17 @@ namespace ListaDeContatos
 
             return retorno;
         }
+
+        public string ListarPorTipo(string tipo)
+        {
+            var retorno = string.Empty; //""
+            foreach (var contato in _contatos.Where(x => x.Tipo == tipo))
+            {
+                //if(contato.Tipo == tipo)
+                    retorno += contato.Mostrar() + Environment.NewLine; // \n
+            }
+
+            return retorno;
+        }
     }
 }
